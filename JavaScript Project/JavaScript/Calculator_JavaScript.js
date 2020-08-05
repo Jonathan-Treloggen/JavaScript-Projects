@@ -22,8 +22,8 @@ function Input_Decimal(dot) {                                // THIS SECTION HAN
     if (Calculator.Wait_Second_Operand === true) return;  // THIS ENSURES THAT ACCIDENTAL CLICKING OF THE DECIMAL POINT
                                                           // DOESN'T CAUSE BUGS IN YOUR OPERATION
     if (!Calculator.Display_Value.includes(dot)) {
-        Calculator.Display_Value += dot;                     // WE ARE SAYING THAT IF THE Display_Value DOES NOT CONTAIN
-                                                             // A DECIMAL POINT WE WANT TO ADD A DECIMAL POINT.
+       Calculator.Display_Value += dot;                     // WE ARE SAYING THAT IF THE Display_Value DOES NOT CONTAIN
+                                                            // A DECIMAL POINT WE WANT TO ADD A DECIMAL POINT.
     }
 }
 
@@ -92,13 +92,13 @@ keys.addEventListener('click', (event) => {
         return;
     }
 
-    if (target,classList,contains('decimal'))  {
+    if (target.classList.contains('decimal'))  {
         Input_Decimal(target.value);
         Update_Display();
         return;
     }
 
-    if (target.classList,contains('all-clear')) {
+    if (target.classList.contains('all-clear')) {
         Calculator_Reset();
         Update_Display();
         return;
