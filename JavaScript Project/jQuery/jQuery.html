@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <script>
+        $(document).ready(function() {
+            $("html").append(
+                "<body>\
+                    <div id='container'>\
+                        <div id='inner'>\
+                            <h1>Basic jQuery</h1>\
+                            <p id='1'>Click here to reveal the hiden, but only while it hides.</p>\
+                            <p id='2'>I'm red.</p>\
+                            <p id='3'>Make Basic jQuery disappear.</p>\
+                        </div>\
+                    </div>\
+                </body>"
+            );
+            $("h1").on("click", function() {
+                console.log("click");
+            });
+            $("#1").click(function(){
+                $('h1').show("fast");
+            });
+            $("#2").css({"color":"red"});
+            $("#3").click(function() {
+                $('h1').hide("slow");
+            });
+            $("h1").css({"text-align":"center"});
+            $("p").css({"text-align":"center"});
+        });
+    </script>
+    
+</body>
+</html>
