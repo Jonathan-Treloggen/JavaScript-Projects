@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON stringify assignment</title>
+</head>
+<body>
+    <p id="favJuice"></p>
+    
+    <script>
+        // SET THE DATA AS A KEY/VALUE PAIR TO BE SAVED LOCALLY IN YOUR BROWSER
+        localStorage.setItem("juice", "Orange Juice");
+        // THEN USE THE KEY "juice" TO RETURN ITS VALUE "Orange Juice"
+        document.getElementById("favJuice").innerHTML = localStorage.getItem("juice");
+    </script>
+</body>
+</html>
